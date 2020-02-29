@@ -1,0 +1,127 @@
+function add(x,y){
+return x + y;
+}
+undefined
+const add1 = (x,y)=>x+y;
+undefined
+typeof add1;
+"function"
+add1(100,200);
+300
+var obj = {
+arr : [10,20,30,6,7,11,9],
+even:[],
+evenOdd(){
+ this.arr.forEach(function(currentElement){
+    if(currentElement%2==0){
+        this.even.push(currentElement);
+}
+});
+console.log("Even Array is ",this.even);
+}
+}
+undefined
+obj.arr
+(7) [10, 20, 30, 6, 7, 11, 9]
+obj.even;
+[]
+obj.evenOdd();
+VM734:7 Uncaught TypeError: Cannot read property 'push' of undefined
+    at <anonymous>:7:19
+    at Array.forEach (<anonymous>)
+    at Object.evenOdd (<anonymous>:5:11)
+    at <anonymous>:1:5
+(anonymous) @ VM734:7
+evenOdd @ VM734:5
+(anonymous) @ VM815:1
+obj.even;
+[]
+var obj = {
+arr : [10,20,30,6,7,11,9],
+even:[],
+evenOdd(){
+    var that = this;
+ this.arr.forEach(function(currentElement){
+    if(currentElement%2==0){
+        that.even.push(currentElement);
+}
+});
+console.log("Even Array is ",that.even);
+}
+}
+undefined
+obj.evenOdd();
+VM1015:11 Even Array is  (4) [10, 20, 30, 6]
+undefined
+var obj = {
+arr : [10,20,30,6,7,11,9],
+even:[],
+evenOdd(){
+   
+ this.arr.forEach((currentElement)=>{
+    if(currentElement%2==0){
+        this.even.push(currentElement);
+}
+});
+console.log("Even Array is ",this.even);
+}
+}
+undefined
+obj.evenOdd();
+VM1093:11 Even Array is  (4) [10, 20, 30, 6]
+undefined
+function whoAmI(){
+console.log("I am ",this.name);
+}
+undefined
+whoAmI();
+VM1250:2 I am  
+undefined
+window.whoAmI();
+VM1250:2 I am  
+undefined
+window.name = "Amit";
+"Amit"
+var name = "Amit";
+undefined
+whoAmI();
+VM1250:2 I am  Amit
+undefined
+var emp = {name:'Ram'};
+undefined
+whoAmI
+ƒ whoAmI(){
+console.log("I am ",this.name);
+}
+console.dir(whoAmI);
+VM1594:1 ƒ whoAmI()length: 0name: "whoAmI"arguments: nullcaller: nullprototype: {constructor: ƒ}__proto__: ƒ ()arguments: (...)caller: (...)length: 0name: ""constructor: ƒ Function()apply: ƒ apply()bind: ƒ bind()call: ƒ call()toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()__proto__: Object[[FunctionLocation]]: <unknown>[[Scopes]]: Scopes[0][[FunctionLocation]]: VM1250:1[[Scopes]]: Scopes[2]
+undefined
+whoAmI.bind(emp);
+ƒ whoAmI(){
+console.log("I am ",this.name);
+}
+whoAmI();
+VM1250:2 I am  Amit
+undefined
+var t = whoAmI.bind(emp);
+undefined
+t();
+VM1250:2 I am  Ram
+undefined
+whoAmI.call(emp);
+VM1250:2 I am  Ram
+undefined
+whoAmI.apply(emp);
+VM1250:2 I am  Ram
+undefined
+function whoAmI(x,y,z){
+console.log("I am ",this.name,x,y,z);
+}
+undefined
+whoAmI.call(emp,100,200,300);
+VM1877:2 I am  Ram 100 200 300
+undefined
+var args = [10,20,30,50,9900,222];
+whoAmI.apply(emp, args);
+VM1877:2 I am  Ram 10 20 30
+undefined

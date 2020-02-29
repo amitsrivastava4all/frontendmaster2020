@@ -1,0 +1,33 @@
+var t = document.querySelectorAll("button");
+undefined
+t.forEach
+ƒ forEach() { [native code] }
+var t2 = document.getElementsByTagName("button");
+undefined
+t2.forEach
+undefined
+t2
+HTMLCollection(9) [button, button, button, button, button, button, button, button, button]
+Array.prototype.forEach
+ƒ forEach() { [native code] }
+var arr = [];
+undefined
+arr.forEach
+ƒ forEach() { [native code] }
+t;
+NodeList(9) [button, button, button, button, button, button, button, button, button]
+t2;
+HTMLCollection(9) [button, button, button, button, button, button, button, button, button]
+var myfunction = Array.prototype.forEach.bind(t2);
+undefined
+myfunction((element)=>console.log("Element is ",element));
+VM1008:1 Element is  <button>​</button>​
+VM1008:1 Element is  <button>​</button>​
+VM1008:1 Element is  <button>​</button>​
+VM1008:1 Element is  <button>​</button>​
+VM1008:1 Element is  <button>​</button>​
+VM1008:1 Element is  <button>​</button>​
+VM1008:1 Element is  <button>​</button>​
+VM1008:1 Element is  <button>​</button>​
+VM1008:1 Element is  <button>​</button>​
+undefined
