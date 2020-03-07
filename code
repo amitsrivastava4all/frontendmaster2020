@@ -1,0 +1,28 @@
+var obj = {
+arr : [10,20,30,6,7,11,9],
+even:[],
+evenOdd(){
+   
+ this.arr.forEach((currentElement)=>{
+    if(currentElement%2==0){
+        this.even.push(currentElement);
+}
+});
+console.log("Even Array is ",this.even);
+}
+}
+
+
+var obj = {
+arr : [10,20,30,6,7,11,9],
+even:[],
+evenOdd(){
+    var that = this;
+ this.arr.forEach(function(currentElement){
+    if(currentElement%2==0){
+        that.even.push(currentElement);
+}
+});
+console.log("Even Array is ",that.even);
+}
+}
